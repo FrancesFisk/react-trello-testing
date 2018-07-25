@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+# enable caching of dependencies in the node_modules folder, which leads to faster builds
+cache:
+  directories:
+    - node_modules
+# when the tests run, the system doesn't keep watching for changes in the source code to re-rerun the tests, which is the default behavior of npm test in apps created with create-react-app
+env:
+  - CI=true

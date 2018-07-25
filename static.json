@@ -1,0 +1,7 @@
+// The root option tells Heroku to serve the production version of the code, which will be in the build directory.
+{
+  "root": "build/",
+  "routes": {
+    "/**": "index.html"
+  }
+}
