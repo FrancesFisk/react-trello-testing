@@ -1,9 +1,14 @@
 language: node_js
 node_js: node
-# enable caching of dependencies in the node_modules folder, which leads to faster builds
 cache:
   directories:
-    - node_modules
-# when the tests run, the system doesn't keep watching for changes in the source code to re-rerun the tests, which is the default behavior of npm test in apps created with create-react-app
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: luhNnCfbnu15zNF68f2YDLCg9iaFtTKxk4rquu0toWowQinMOo12sBxOFll9ENfE0H9NghDgz4jmp0MEmwVinP+9nxpH7WrWg02ypMyn9E7eq3/E9drnuIV9hqOomRrSHk5n4LcCJFUe6PsmQ00tpuZiDGiwyCV65ye2hbcGUTt6U1TBaPzfyibK2NXXvpwUImrsHwMR7SnKYAyMzr1zxpoBHCiS5m6/CdBLuH3dTzzEC/mvQKDOuUD7nAW3JlquDBa6QsiAWgQRYWprznlp3cgfpGJK1ZJWScVsTelI/CR4U7Fulf9ngEkbCt4iOchACX6pyBXpdwPL/M7Iluk0wHcZo/edWRhX8c+QaTfdmWB+ejglM2/O7xBQFy1OnOzDG2v4xPmdt9KFueHv32iIs3oD8Dg6vVT/gdGAkoiV21X5L/OdiJoMQ0uJNWT3GIwt2kWiNQhgsEmOdBOus064kHWHAzYru8PimgbYrPUiHg5BNxJ8rgpDAXStUXiMxlypZYKTEHJN21ptPiWT1tBv+1RNsqi/oHPAgPkeJCngxEcEgdOpb8TW4DOs5KRKprxX7EfFnfi5rJl7nr9dA35n9AHoGurxR77KsKF64Il06ApI6ltcV6t2JGbo8skg5q5JfM0qmAdRD95be7FoLzC37YHDnXaaHhuNz0n9xnDHPag=
+  app: serene-thicket-91385
+  on:
+    repo: FrancesFisk/react-trello-testing
